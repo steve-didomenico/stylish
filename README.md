@@ -2,6 +2,7 @@
 Custom CSS styles for use with the Stylus browser plugin.
 
 Install the plugin at https://add0n.com/stylus.html then use these CSS styles for a website.
+The source code of the stylus plugin can be found here: https://github.com/openstyles/stylus/
 
 The ms-teams.css file has a few features to make chat a little more readable, including making the teams chat area wider, making the reply button smaller and off to the right, and hiding pictures.
 Portions were taken from the "Slack Teams" css theme by Mike Boyd, which was also taken from the "Condensed Microsoft Teams" theme by mstmstyle.
