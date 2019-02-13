@@ -1,0 +1,214 @@
+/* Stylish theme for Microsoft Teams
+   https://github.com/steve-didomenico/stylish
+   
+   Install the plugin at https://add0n.com/stylus.html then use these CSS styles for a website.
+   
+   Use this style with the URL: teams.microsoft.com
+   
+   Portions of this css were taken from "Slack Teams" css by Mike Boyd, which was also taken
+   from the "Condensed Microsoft Teams" theme by mstmstyle.
+   https://userstyles.org/styles/165569/slack-teams
+   https://userstyles.org/styles/164545/compact-microsoft-teams-for-light-theme
+   
+   Note that userstyles.org has the "Stylish" plugin, that includes a website analytics tracking system. The "Stylus" plugin does not.
+
+*/
+
+/* make message font a little bigger */
+body {
+    font-size: 1.5rem;
+}
+
+/* hide users' pictures except on hover */
+.media-left .wrapper profile-picture .media-object {
+    visibility: hidden;
+}
+
+.media-left .wrapper profile-picture:hover .media-object {
+    visibility: visible;
+}
+
+/* move online status icon up a bit */
+.ts-message .thread-body-status>.ts-skype-status {
+    top: 0.9rem !important;
+}
+
+/* make reply button small */
+.ts-message-list-item .thread-action-reply-message * .icons-reply
+{
+    width: 40px;
+}
+
+/* place reply button on right */
+.ts-message-action-toolbar {
+    text-align: right;
+}
+
+/* Remove "reply" text, just use icon */
+.ts-message-action-toolbar * span {
+	display: none;
+}
+
+
+/* box shadow creates lines with smaller reply button */
+.message-list-common:not(.chat-style) thread .ts-message::before {
+    box-shadow: none;
+}
+
+/* make sure hover person-card has correct color text */
+.person-card {
+    background: rgb(141, 129, 142);
+}
+
+/* shrink the channel list! */
+  @media (min-width: 1000px) {
+    .app-rail-common>div, .fullscreen-layout .ts-left-rail-wrapper, .left-rail-item, .ts-left-rail-wrapper {
+      width: 25rem;
+    }
+    .app-left-rail-width {
+      width: 25rem;
+    }
+  }
+
+/* reducing the unused space at the new message field at the bottom */
+.ts-add-message {
+    margin: .3rem 0 .5rem;
+}
+
+/*border around the new message field at the bottom, more slack-like */
+.ts-add-message .ts-border-newcompose:not(.ts-new-message-expand) .ts-new-message-footer {
+    border: 2px solid rgba(134,134,134,.7);
+}
+
+/* slack-like channel list */
+.ts-left-rail-wrapper {
+    color: black;
+    background: #3F0E40;
+}
+ .ts-channel-list .team.match-parent {
+     margin-bottom: 0; 
+} 
+.ts-left-rail-wrapper a {
+    color: rgb(178,159,179);
+}
+.team-operations-container-item {
+    color: rgb(178,159,179)!important;
+}
+.channel-list-team-header a.unread {
+    font-weight: bold;
+    color: white;
+}
+.ts-channel-list a.ts-unread-channel {
+    font-weight: 700;
+    color: white;
+}
+.ts-left-rail-tree .ts-tree-header {
+    color: rgb(178,159,179);
+}
+.channel-list-team-header a {
+    padding: 0 .5rem 0 2rem;
+}
+.channel-list-team-header {
+    height: 3.2rem;
+}
+.ts-channel-list .name-channel-type .truncate.header-text {
+    padding-right: 0;
+}
+.popover.left-rail-popover .simple-scrollbar {
+    background: #3F0E40;
+}
+.popover.left-rail-popover .channel-overflow-teamname {
+    margin: 0;
+}
+.popover.left-rail-popover {
+    background: #3F0E40;
+    padding: .8rem 0 0 0;
+    border: 1px solid black;
+}
+.popover.left-rail-popover .channel-overflow-teamname {
+    color: rgb(178,159,179);
+}
+.ts-channel-list .open-channel-mgr.left-rail-selected {
+    color: #6264a7;
+}
+
+/* can't forget chat list coloring! */
+.chat-list .recipient-group-list-item a.cle-item:not(.ts-unread-channel) {
+    color: rgb(178,159,179);
+}
+.chat-list .recipient-group-list-item .truncate-name {
+    color: rgb(178,159,179);
+}
+.child-popover, div.popover {
+    background: #3F0E40;
+    padding: .8rem 0 0 0;
+    border: 1px solid black;
+}
+.app-default-menu li>.ts-sym, .app-default-menu li>a, .pre, code, pre {
+    color: rgb(178,159,179);
+}
+
+/* activites list */
+.ts-left-rail {
+    color: rgb(178,159,179);
+}
+.feed-content .feed-name {
+    color: rgb(178,159,179);
+}
+.feed-content .feed-subject {
+    color: rgb(150, 136, 151);
+}
+.feed-content .feed-message {
+    color: rgb(114, 104, 115);
+}
+.feed-content .left-rail-item {
+    padding: .1rem 2rem;
+}
+
+/* user-apps list */
+.app-name, .app-store-text {
+    color: rgb(178,159,179) !important;
+}
+
+/*  files */
+.dialog-mode .files-navigation li button, .ts-left-rail .files-navigation li button {
+    color: rgb(178,159,179);
+}
+.dialog-mode .files-navigation li.selected-element button, .ts-left-rail .files-navigation li.selected-element button {
+    color: black;
+}
+
+/* get rid of dorky blue line at bottom of new message field when clicked */
+.ts-add-message .new-message-bg-light-f .ts-new-message-footer::after,
+.ts-reply-message .new-message-bg-light-f .ts-new-message-footer::after,
+.edit-message-form .new-message-bg-light-f .extension-icons-container::after,
+.ts-create-update-meeting .ts-new-message.new-message-bg-light-f .ts-new-message-footer::after,
+.edit-message-form .new-message-bg-light-f .extension-icons-container::after{
+    border-bottom: 0 !important;
+}
+
+/* fix text that has purple background (profile name, "saved" bookmark note, list of people who thumbsed-up a comment) */
+.profile-name-text, 
+.app-header-bar .app-header-bar-saved-coachmark span,
+.ts-person-card-list .ts-persons a, .ts-person-card-list .ts-persons span {
+    color: rgb(178,159,179) !important;
+}
+
+
+/* Widen team-chat 
+    (copied this huge list of selectors given by firefox Developer tool most appear to be relevant )
+*/
+.message-list-common:not(.chat-style) .button-row,
+.message-list-common:not(.chat-style) .large-max-stage, 
+.message-list-common:not(.chat-style) .message-list-common .button-row,
+.message-list-common:not(.chat-style) .message-pane .new-typing-indicator,
+.message-list-common:not(.chat-style) .middle-messages-context-stripe .ts-message-list-container,
+.message-list-common:not(.chat-style) .ts-add-message .ts-new-message, 
+.message-list-common:not(.chat-style) .ts-message-list-container, 
+.message-list-common:not(.chat-style) .ts-new-meetup-animated,
+.message-list-common:not(.chat-style) virtual-repeat > .list-wrap > .item-wrap, 
+.ts-add-message.is-not-chat .ts-new-message
+{
+        max-width: 100%;
+
+}
