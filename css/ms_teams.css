@@ -1,9 +1,7 @@
 /* Stylish theme for Microsoft Teams
-   https://github.com/steve-didomenico/stylus
+   https://github.com/steve-didomenico/stylish
    
-   Install the plugin at https://add0n.com/stylus.html then use these CSS styles for a website. 
-   The source code of the stylus plugin can be found here: https://github.com/openstyles/stylus/
-
+   Install the plugin at https://add0n.com/stylus.html then use these CSS styles for a website.
    
    Use this style with the URL: teams.microsoft.com
    
@@ -213,4 +211,8 @@ body {
 {
         max-width: 100%;
 
+}
+
+.media-left {
+    background: #201f1f;
 }
